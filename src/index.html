@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Todo app with Stimulus</title>
+</head>
+<body>
+<div class="container" data-controller="todo--create">
+    <form data-action="todo--create#add">
+        <div class="mb-3">
+            <label for="task" class="form-label">Tâche</label>
+            <input type="text" id="task" class="form-control" data-todo--create-target="task">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Ajouter la tâche</button>
+            <button type="button" class="btn btn-secondary" data-action="todo--create#clear">Vider la liste de tâches</button>
+        </div>
+    </form>
+
+    <h2>Liste des tâche à réaliser</h2>
+    <div class="list-group" data-todo--create-target="list"></div>
+</div>
+</body>
+</html>

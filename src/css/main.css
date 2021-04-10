@@ -1,0 +1,4 @@
+@import '~bootstrap';
+.checked label {
+    text-decoration: line-through;
+}
